@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		DB859EF1309B68E00093373B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB859EDB309B68DF0093373B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB859EE2309B68DF0093373B;
+			remoteInfo = TheMealDatabase;
+		};
+		DB859EFB309B68E00093373B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB859EDB309B68DF0093373B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB859EE2309B68DF0093373B;
+			remoteInfo = TheMealDatabase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB859EE3309B68DF0093373B /* TheMealDatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMealDatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB859EF0309B68E00093373B /* TheMealDatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMealDatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB859EFA309B68E00093373B /* TheMealDatabaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMealDatabaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DB859EE5309B68DF0093373B /* TheMealDatabase */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TheMealDatabase;
+			sourceTree = "<group>";
+		};
+		DB859EF3309B68E00093373B /* TheMealDatabaseTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TheMealDatabaseTests;
+			sourceTree = "<group>";
+		};
+		DB859EFD309B68E00093373B /* TheMealDatabaseUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TheMealDatabaseUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB859EE0309B68DF0093373B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		DB859EED309B68E00093373B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		DB859EF7309B68E00093373B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB859EDA309B68DF0093373B = {
+			isa = PBXGroup;
+			children = (
+				DB859EE5309B68DF0093373B /* TheMealDatabase */,
+				DB859EF3309B68E00093373B /* TheMealDatabaseTests */,
+				DB859EFD309B68E00093373B /* TheMealDatabaseUITests */,
+				DB859EE4309B68DF0093373B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB859EE4309B68DF0093373B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB859EE3309B68DF0093373B /* TheMealDatabase.app */,
+				DB859EF0309B68E00093373B /* TheMealDatabaseTests.xctest */,
+				DB859EFA309B68E00093373B /* TheMealDatabaseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB859EE2309B68DF0093373B /* TheMealDatabase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB859F02309B68E00093373B /* Build configuration list for PBXNativeTarget "TheMealDatabase" */;
+			buildPhases = (
+				DB859EDF309B68DF0093373B /* Sources */,
+				DB859EE0309B68DF0093373B /* Frameworks */,
+				DB859EE1309B68DF0093373B /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				DB859EE5309B68DF0093373B /* TheMealDatabase */,
+			);
+			name = TheMealDatabase;
+			productName = TheMealDatabase;
+			productReference = DB859EE3309B68DF0093373B /* TheMealDatabase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB859EEF309B68E00093373B /* TheMealDatabaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB859F05309B68E00093373B /* Build configuration list for PBXNativeTarget "TheMealDatabaseTests" */;
+			buildPhases = (
+				DB859EEC309B68E00093373B /* Sources */,
+				DB859EED309B68E00093373B /* Frameworks */,
+				DB859EEE309B68E00093373B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB859EF2309B68E00093373B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DB859EF3309B68E00093373B /* TheMealDatabaseTests */,
+			);
+			name = TheMealDatabaseTests;
+			productName = TheMealDatabaseTests;
+			productReference = DB859EF0309B68E00093373B /* TheMealDatabaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB859EF9309B68E00093373B /* TheMealDatabaseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB859F08309B68E00093373B /* Build configuration list for PBXNativeTarget "TheMealDatabaseUITests" */;
+			buildPhases = (
+				DB859EF6309B68E00093373B /* Sources */,
+				DB859EF7309B68E00093373B /* Frameworks */,
+				DB859EF8309B68E00093373B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB859EFC309B68E00093373B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DB859EFD309B68E00093373B /* TheMealDatabaseUITests */,
+			);
+			name = TheMealDatabaseUITests;
+			productName = TheMealDatabaseUITests;
+			productReference = DB859EFA309B68E00093373B /* TheMealDatabaseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB859EDB309B68DF0093373B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					DB859EE2309B68DF0093373B = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					DB859EEF309B68E00093373B = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = DB859EE2309B68DF0093373B;
+					};
+					DB859EF9309B68E00093373B = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = DB859EE2309B68DF0093373B;
+					};
+				};
+			};
+			buildConfigurationList = DB859EDE309B68DF0093373B /* Build configuration list for PBXProject "TheMealDatabase" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB859EDA309B68DF0093373B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DB859EE4309B68DF0093373B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB859EE2309B68DF0093373B /* TheMealDatabase */,
+				DB859EEF309B68E00093373B /* TheMealDatabaseTests */,
+				DB859EF9309B68E00093373B /* TheMealDatabaseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB859EE1309B68DF0093373B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		DB859EEE309B68E00093373B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		DB859EF8309B68E00093373B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB859EDF309B68DF0093373B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		DB859EEC309B68E00093373B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		DB859EF6309B68E00093373B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB859EF2309B68E00093373B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB859EE2309B68DF0093373B /* TheMealDatabase */;
+			targetProxy = DB859EF1309B68E00093373B /* PBXContainerItemProxy */;
+		};
+		DB859EFC309B68E00093373B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB859EE2309B68DF0093373B /* TheMealDatabase */;
+			targetProxy = DB859EFB309B68E00093373B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DB859F00309B68E00093373B /* Debug configuration for PBXProject "TheMealDatabase" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = URH6RD3DR5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB859F01309B68E00093373B /* Release configuration for PBXProject "TheMealDatabase" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = URH6RD3DR5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB859F03309B68E00093373B /* Debug configuration for PBXNativeTarget "TheMealDatabase" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = URH6RD3DR5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iqqddq.TheMealDatabase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB859F04309B68E00093373B /* Release configuration for PBXNativeTarget "TheMealDatabase" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = URH6RD3DR5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iqqddq.TheMealDatabase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB859F06309B68E00093373B /* Debug configuration for PBXNativeTarget "TheMealDatabaseTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = URH6RD3DR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iqqddq.TheMealDatabaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheMealDatabase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TheMealDatabase";
+			};
+			name = Debug;
+		};
+		DB859F07309B68E00093373B /* Release configuration for PBXNativeTarget "TheMealDatabaseTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = URH6RD3DR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iqqddq.TheMealDatabaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheMealDatabase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TheMealDatabase";
+			};
+			name = Release;
+		};
+		DB859F09309B68E00093373B /* Debug configuration for PBXNativeTarget "TheMealDatabaseUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = URH6RD3DR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iqqddq.TheMealDatabaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheMealDatabase;
+			};
+			name = Debug;
+		};
+		DB859F0A309B68E00093373B /* Release configuration for PBXNativeTarget "TheMealDatabaseUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = URH6RD3DR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iqqddq.TheMealDatabaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheMealDatabase;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB859EDE309B68DF0093373B /* Build configuration list for PBXProject "TheMealDatabase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB859F00309B68E00093373B /* Debug configuration for PBXProject "TheMealDatabase" */,
+				DB859F01309B68E00093373B /* Release configuration for PBXProject "TheMealDatabase" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		DB859F02309B68E00093373B /* Build configuration list for PBXNativeTarget "TheMealDatabase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB859F03309B68E00093373B /* Debug configuration for PBXNativeTarget "TheMealDatabase" */,
+				DB859F04309B68E00093373B /* Release configuration for PBXNativeTarget "TheMealDatabase" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		DB859F05309B68E00093373B /* Build configuration list for PBXNativeTarget "TheMealDatabaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB859F06309B68E00093373B /* Debug configuration for PBXNativeTarget "TheMealDatabaseTests" */,
+				DB859F07309B68E00093373B /* Release configuration for PBXNativeTarget "TheMealDatabaseTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		DB859F08309B68E00093373B /* Build configuration list for PBXNativeTarget "TheMealDatabaseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB859F09309B68E00093373B /* Debug configuration for PBXNativeTarget "TheMealDatabaseUITests" */,
+				DB859F0A309B68E00093373B /* Release configuration for PBXNativeTarget "TheMealDatabaseUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB859EDB309B68DF0093373B /* Project object */;
+	validationLevel = 1;
+}
