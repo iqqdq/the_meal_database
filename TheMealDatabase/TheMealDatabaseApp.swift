@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct TheMealDatabaseApp: App {
+    let repository: MealRepositoryProtocol
+
+    init() {
+        self.repository = MealRepository()
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MealListView(repository: repository)
         }
     }
 }
