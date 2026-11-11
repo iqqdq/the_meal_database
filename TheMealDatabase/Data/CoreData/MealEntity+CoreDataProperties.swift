@@ -18,8 +18,8 @@ extension MealEntity {
         return NSFetchRequest<MealEntity>(entityName: "MealEntity")
     }
 
-    @NSManaged nonisolated public var idMeal: String
-    @NSManaged nonisolated public var strMeal: String
+    @NSManaged nonisolated public var idMeal: String?
+    @NSManaged nonisolated public var strMeal: String?
     @NSManaged nonisolated public var strCategory: String?
     @NSManaged nonisolated public var strArea: String?
     @NSManaged nonisolated public var strInstructions: String?
