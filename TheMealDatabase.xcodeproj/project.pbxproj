@@ -6,6 +6,10 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DB0A44E030A6087B00CEF95F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DB0A44DF30A6087B00CEF95F /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DB859EF1309B68E00093373B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -51,6 +55,7 @@
 		DB859EE0309B68DF0093373B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				DB0A44E030A6087B00CEF95F /* Kingfisher in Frameworks */,
 			);
 		};
 		DB859EED309B68E00093373B /* Frameworks */ = {
@@ -66,12 +71,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB0A44DE30A6087B00CEF95F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB859EDA309B68DF0093373B = {
 			isa = PBXGroup;
 			children = (
 				DB859EE5309B68DF0093373B /* TheMealDatabase */,
 				DB859EF3309B68E00093373B /* TheMealDatabaseTests */,
 				DB859EFD309B68E00093373B /* TheMealDatabaseUITests */,
+				DB0A44DE30A6087B00CEF95F /* Frameworks */,
 				DB859EE4309B68DF0093373B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +116,9 @@
 				DB859EE5309B68DF0093373B /* TheMealDatabase */,
 			);
 			name = TheMealDatabase;
+			packageProductDependencies = (
+				DB0A44DF30A6087B00CEF95F /* Kingfisher */,
+			);
 			productName = TheMealDatabase;
 			productReference = DB859EE3309B68DF0093373B /* TheMealDatabase.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +198,9 @@
 			);
 			mainGroup = DB859EDA309B68DF0093373B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DB0A445E30A6071600CEF95F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DB859EE4309B68DF0093373B /* Products */;
 			projectDirPath = "";
@@ -559,6 +578,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB0A445E30A6071600CEF95F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB0A44DF30A6087B00CEF95F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB0A445E30A6071600CEF95F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB859EDB309B68DF0093373B /* Project object */;
 	validationLevel = 1;

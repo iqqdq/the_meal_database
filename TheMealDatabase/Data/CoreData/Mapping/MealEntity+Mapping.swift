@@ -57,13 +57,3 @@ extension MealEntity {
         return entity
     }
 }
-
-extension IngredientEntity {
-    func toDomain() -> Ingredient {
-        return Ingredient(
-            id: UUID().uuidString,
-            name: self.name,
-            measure: self.measure
-        )
-    }
-}

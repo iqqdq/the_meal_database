@@ -38,7 +38,6 @@ import SwiftUI
                         ),
                     ]
                 ),
-                repository: MockMealRepository()
             )
         }
     }

@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Add meals to favourites to see them here" : {
+
+    },
     "api_error_generic" : {
       "comment" : "Generic error message",
       "localizations" : {
@@ -86,6 +89,9 @@
         }
       }
     },
+    "Favourites" : {
+
+    },
     "Ingredients" : {
       "comment" : "Section title for ingredients",
       "localizations" : {
@@ -119,6 +125,9 @@
           }
         }
       }
+    },
+    "No favourites" : {
+
     },
     "No instructions available" : {
       "comment" : "Text shown when instructions are missing",
@@ -170,6 +179,9 @@
           }
         }
       }
+    },
+    "Search" : {
+
     },
     "Search for a meal" : {
       "comment" : "Search bar prompt",

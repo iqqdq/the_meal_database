@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct MealRowView: View {
     let meal: Meal
@@ -13,15 +14,14 @@ struct MealRowView: View {
     var body: some View {
         HStack(spacing: 12) {
             // Image
-            AsyncImage(url: URL(string: meal.imageURL ?? "")) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(width: 60, height: 60)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            KFImage(URL(string: meal.imageURL ?? ""))
+                .placeholder {
+                    ProgressView()
+                }
+                .resizable()
+                .scaledToFill()
+                .frame(width: 60, height: 60)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
 
             // Name
             VStack(alignment: .leading, spacing: 4) {
