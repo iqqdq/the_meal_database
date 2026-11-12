@@ -18,6 +18,7 @@ struct TheMealDatabaseApp: App {
     var body: some Scene {
         WindowGroup {
             MealListView(repository: repository)
+                .background(Color.appBackground)
         }
     }
 }

@@ -8,11 +8,8 @@
 import SwiftUI
 
 struct MealListView: View {
-
-    // Создаем Store через @State
     @State private var store: MealListStore
-
-    // Добавляем Store для debounce (он будет хранить текущую задачу)
+    // Debounce task
     @State private var searchTask: Task<Void, Never>? = nil
 
     init(repository: MealRepositoryProtocol) {
@@ -23,15 +20,19 @@ struct MealListView: View {
         NavigationStack {
             Group {
                 if store.isLoading {
-                    ProgressView("Ищем рецепты...")
+                    ProgressView("Searching for recipes...").foregroundStyle(
+                        .appText
+                    )
                 } else if let error = store.errorMessage {
-                    Text("Ошибка: \(error)")
-                        .foregroundColor(.red)
+                    Text("Error: \(error)")
+                        .foregroundStyle(.red)
                 } else if store.meals.isEmpty {
                     ContentUnavailableView(
-                        "Ничего не найдено",
+                        "Nothing found",
                         systemImage: "fork.knife",
-                        description: Text("Введите название блюда для поиска")
+                        description: Text("Enter a meal name to search")
+                            .font(.subheadline)
+                            .foregroundStyle(.appSecondaryText)
                     )
                 } else {
                     List(store.meals) { meal in
@@ -41,8 +42,9 @@ struct MealListView: View {
                     }
                 }
             }
-            .navigationTitle("Рецепты")
-            .searchable(text: $store.searchQuery, prompt: "Найти блюдо")
+            .navigationTitle("Recipes")
+            .searchable(text: $store.searchQuery, prompt: "Search for a meal")
+            .foregroundStyle(.appText)
             .onChange(of: store.searchQuery) { _, newValue in
                 // 1. Отменяем предыдущую задачу, если пользователь все еще печатает
                 searchTask?.cancel()
@@ -64,21 +66,20 @@ struct MealListView: View {
                 }
             }
             .navigationDestination(for: Meal.self) { meal in
-                // Здесь будет экран деталей (пока просто заглушка)
-                Text(meal.name)
+                MealDetailView(meal: meal)
             }
         }
     }
 }
 
 // MARK: - MealRowView
-// Отдельная строка списка (чтобы не захламлять основной View)
+
 struct MealRowView: View {
     let meal: Meal
 
     var body: some View {
         HStack(spacing: 12) {
-            // Асинхронная загрузка картинки
+            // Image
             AsyncImage(url: URL(string: meal.imageURL ?? "")) { image in
                 image
                     .resizable()
@@ -89,14 +90,17 @@ struct MealRowView: View {
             .frame(width: 60, height: 60)
             .clipShape(RoundedRectangle(cornerRadius: 8))
 
+            // Name
             VStack(alignment: .leading, spacing: 4) {
                 Text(meal.name)
                     .font(.headline)
+                    .foregroundStyle(.appText)
 
+                // Category
                 if let category = meal.category {
                     Text(category)
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundStyle(.appSecondaryText)
                 }
             }
         }
@@ -105,5 +109,5 @@ struct MealRowView: View {
 }
 
 #Preview {
-    MealListView(repository: MockPreviewRepository())
+    MealListView(repository: MockMealRepository())
 }

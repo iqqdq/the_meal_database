@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MockPreviewRepository: MealRepositoryProtocol {
+final class MockMealRepository: MealRepositoryProtocol {
     func searchMeals(query: String) async throws -> [Meal] {
         return [
             Meal(
@@ -16,10 +16,11 @@ final class MockPreviewRepository: MealRepositoryProtocol {
                 category: "Vegetarian",
                 area: "Italian",
                 instructions: "...",
-                imageURL: "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+                imageURL:
+                    "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
                 ingredients: [
                     Ingredient(id: "1", name: "Penne", measure: "1 pound"),
-                    Ingredient(id: "2", name: "Olive Oil", measure: "1/4 cup")
+                    Ingredient(id: "2", name: "Olive Oil", measure: "1/4 cup"),
                 ]
             ),
             Meal(
@@ -28,12 +29,13 @@ final class MockPreviewRepository: MealRepositoryProtocol {
                 category: "Chicken",
                 area: "Indian",
                 instructions: "...",
-                imageURL: "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
+                imageURL:
+                    "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
                 ingredients: []
-            )
+            ),
         ]
     }
-    
+
     func fetchFavourites() async throws -> [Meal] { return [] }
     func saveFavourite(meal: Meal) async throws {}
     func removeFavourite(mealId: String) async throws {}

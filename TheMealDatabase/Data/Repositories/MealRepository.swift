@@ -11,7 +11,7 @@ import CoreData
 final class MealRepository: MealRepositoryProtocol {
     
     private let apiClient: APIClient
-    private let coreDataStack: CoreDataStack
+    private let coreDataStack: CoreDataStack // TODO: Заменить на MealStorage
     
     init(
         apiClient: APIClient = .shared,
@@ -77,7 +77,6 @@ final class MealRepository: MealRepositoryProtocol {
     
     private func saveMealsToCache(_ meals: [Meal]) async {
         let context = coreDataStack.newBackgroundContext()
-        
         await context.perform {
             for meal in meals {
                 // Проверяем, нет ли уже такого блюда в базе (чтобы не дублировать)

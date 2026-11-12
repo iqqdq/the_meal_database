@@ -12,10 +12,12 @@ import Observation
 @Observable
 final class MealListStore {
     
-    // Зависимость от протокола (как мы и договаривались)
+    // MARK: - Dependencies
+    
     private let repository: MealRepositoryProtocol
     
-    // Состояния для UI
+    // MARK: - UI
+    
     var meals: [Meal] = []
     var isLoading = false
     var errorMessage: String?
@@ -35,7 +37,6 @@ final class MealListStore {
         errorMessage = nil
         
         do {
-            // Асинхронный вызов репозитория
             self.meals = try await repository.searchMeals(query: searchQuery)
         } catch {
             self.errorMessage = error.localizedDescription
