@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct MealDetailView: View {
-    let meal: Meal
 
+    // MARK: - State
+
+    @State private var store: MealDetailStore
+
+    // MARK: - Init
+    
+    init(meal: Meal, repository: MealRepositoryProtocol) {
+        _store = State(
+            wrappedValue: MealDetailStore(meal: meal, repository: repository)
+        )
+    }
+
+    // MARK: - UI
+    
     var body: some View {
         ScrollView {
             VStack(
@@ -18,7 +31,7 @@ struct MealDetailView: View {
             ) {
                 // Image
                 AsyncImage(
-                    url: URL(string: meal.imageURL ?? "")
+                    url: URL(string: store.meal.imageURL ?? "")
                 ) {
                     image in
                     image.resizable()
@@ -34,21 +47,21 @@ struct MealDetailView: View {
                     spacing: 16.0
                 ) {
                     // Name
-                    Text(meal.name)
+                    Text(store.meal.name)
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundStyle(.appText)
 
                     HStack {
                         // Category
-                        if let category = meal.category {
+                        if let category = store.meal.category {
                             Label(category, systemImage: "fork.knife")
                                 .font(.subheadline)
                                 .foregroundStyle(.appSecondaryText)
                         }
                         Spacer()
                         // Area
-                        if let area = meal.area {
+                        if let area = store.meal.area {
                             Label(area, systemImage: "globe")
                                 .font(.subheadline)
                                 .foregroundStyle(.appSecondaryText)
@@ -64,7 +77,7 @@ struct MealDetailView: View {
                         .foregroundStyle(.appText)
 
                     ForEach(
-                        meal.ingredients
+                        store.meal.ingredients
                     ) { ingredient in
                         HStack {
                             Text(ingredient.name)
@@ -83,7 +96,7 @@ struct MealDetailView: View {
                         .fontWeight(.semibold)
 
                     Text(
-                        meal.instructions
+                        store.meal.instructions
                             ?? String(localized: "No instructions available")
                     )
                     .font(.body)
@@ -93,7 +106,22 @@ struct MealDetailView: View {
                 }.padding(.horizontal)
             }
         }
-        .navigationTitle(meal.name)
+        .navigationTitle(store.meal.name)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    Task {
+                        await store.toggleFavourite()
+                    }
+                } label: {
+                    Image(
+                        systemName: store.isFavourite ? "heart.fill" : "heart"
+                    )
+                    .foregroundColor(store.isFavourite ? .red : .appText)
+                }
+            }
+        }
     }
+
 }

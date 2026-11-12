@@ -15,4 +15,5 @@ struct Meal: Identifiable, Hashable {
     let instructions: String?
     let imageURL: String?
     var ingredients: [Ingredient]
+    var isFavourite: Bool = false
 }

@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct MealListView: View {
+
+    // MARK: - Dependencies
+
+    private let repository: MealRepositoryProtocol
+
+    // MARK: - State
+
     @State private var store: MealListStore
-    // Debounce task
     @State private var searchTask: Task<Void, Never>? = nil
 
+    // MARK: - Init
+
     init(repository: MealRepositoryProtocol) {
+        self.repository = repository
         _store = State(wrappedValue: MealListStore(repository: repository))
     }
+
+    // MARK: - UI
 
     var body: some View {
         NavigationStack {
@@ -66,45 +77,9 @@ struct MealListView: View {
                 }
             }
             .navigationDestination(for: Meal.self) { meal in
-                MealDetailView(meal: meal)
+                MealDetailView(meal: meal, repository: repository)
             }
         }
-    }
-}
-
-// MARK: - MealRowView
-
-struct MealRowView: View {
-    let meal: Meal
-
-    var body: some View {
-        HStack(spacing: 12) {
-            // Image
-            AsyncImage(url: URL(string: meal.imageURL ?? "")) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(width: 60, height: 60)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
-
-            // Name
-            VStack(alignment: .leading, spacing: 4) {
-                Text(meal.name)
-                    .font(.headline)
-                    .foregroundStyle(.appText)
-
-                // Category
-                if let category = meal.category {
-                    Text(category)
-                        .font(.subheadline)
-                        .foregroundStyle(.appSecondaryText)
-                }
-            }
-        }
-        .padding(.vertical, 4)
     }
 }
 

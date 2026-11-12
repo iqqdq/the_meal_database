@@ -36,6 +36,7 @@ final class MockMealRepository: MealRepositoryProtocol {
         ]
     }
 
+    func toggleFavourite(meal: Meal) async throws {}
     func fetchFavourites() async throws -> [Meal] { return [] }
     func saveFavourite(meal: Meal) async throws {}
     func removeFavourite(mealId: String) async throws {}

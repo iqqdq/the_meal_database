@@ -27,7 +27,8 @@ extension MealEntity {
             area: self.strArea,
             instructions: self.strInstructions,
             imageURL: self.strMealThumb,
-            ingredients: mappedIngredients
+            ingredients: mappedIngredients,
+            isFavourite: self.isFavourite
         )
     }
 

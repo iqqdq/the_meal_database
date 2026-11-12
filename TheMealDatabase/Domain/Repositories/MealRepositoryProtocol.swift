@@ -14,4 +14,5 @@ protocol MealRepositoryProtocol {
     func saveFavourite(meal: Meal) async throws
     func removeFavourite(mealId: String) async throws
     func fetchFavourites() async throws -> [Meal]
+    func toggleFavourite(meal: Meal) async throws 
 }

@@ -7,6 +7,7 @@
     </entity>
     <entity name="MealEntity" representedClassName="MealEntity" syncable="YES">
         <attribute name="idMeal" attributeType="String"/>
+        <attribute name="isFavourite" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="strArea" optional="YES" attributeType="String"/>
         <attribute name="strCategory" optional="YES" attributeType="String"/>
         <attribute name="strInstructions" optional="YES" attributeType="String"/>

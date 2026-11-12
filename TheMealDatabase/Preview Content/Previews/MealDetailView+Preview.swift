@@ -37,7 +37,8 @@ import SwiftUI
                             measure: "3 cloves"
                         ),
                     ]
-                )
+                ),
+                repository: MockMealRepository()
             )
         }
     }
