@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct TheMealDatabaseApp: App {
     @State private var store: MealStore
+    @State private var router = AppRouter()
     
     init() {
         let repository = MealRepository()
@@ -19,7 +20,8 @@ struct TheMealDatabaseApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
-                .environment(store) // Прокидываем Store во всё приложение
+                .environment(store)
+                .environment(\.appRouter, router)
                 .background(Color.appBackground)
         }
     }

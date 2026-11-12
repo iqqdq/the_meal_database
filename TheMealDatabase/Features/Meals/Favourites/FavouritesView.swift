@@ -7,29 +7,33 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct FavouritesView: View {
+    @Environment(\.appRouter) private var router
     @Environment(MealStore.self) private var store
-    
+
     var body: some View {
-        NavigationStack {
+        @Bindable var router = router
+
+        NavigationStack(path: $router.path) {
             Group {
                 if !store.hasLoadedFavourites && store.isLoading {
                     ProgressView()
-                }
-                else if store.favourites.isEmpty {
+                } else if store.favourites.isEmpty {
                     ContentUnavailableView(
                         "No favourites",
                         systemImage: "heart.slash",
-                        description: Text("Add meals to favourites to see them here")
+                        description: Text(
+                            "Add meals to favourites to see them here"
+                        )
                     )
-                }
-                else {
+                } else {
                     List(store.favourites) { meal in
-                        NavigationLink(value: meal) {
+                        Button {
+                            router.navigateToMealDetail(meal)
+                        } label: {
                             MealRowView(meal: meal)
                         }
+                        .foregroundStyle(.appText)
                     }
                 }
             }

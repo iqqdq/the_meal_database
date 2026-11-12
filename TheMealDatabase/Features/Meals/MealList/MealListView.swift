@@ -7,16 +7,18 @@
 import SwiftUI
 
 struct MealListView: View {
+    @Environment(\.appRouter) private var router
     // Берем глобальный Store из Environment
     @Environment(MealStore.self) private var store
-    
+
     @State private var searchTask: Task<Void, Never>? = nil
-    
+
     var body: some View {
+        @Bindable var router = router
         // Чтобы делать Binding к searchQuery из @Environment, используем @Bindable
         @Bindable var store = store
-        
-        NavigationStack {
+
+        NavigationStack(path: $router.path) {
             Group {
                 if store.isLoading && store.meals.isEmpty {
                     ProgressView("Searching for recipes...")
@@ -31,9 +33,12 @@ struct MealListView: View {
                     )
                 } else {
                     List(store.meals) { meal in
-                        NavigationLink(value: meal) {
+                        Button {
+                            router.navigateToMealDetail(meal)
+                        } label: {
                             MealRowView(meal: meal)
                         }
+                        .foregroundStyle(.appText)
                     }
                 }
             }
@@ -50,9 +55,11 @@ struct MealListView: View {
                     } catch {}
                 }
             }
-            .navigationDestination(for: Meal.self) { meal in
-                // Передаем только ID или само блюдо, репозиторий не нужен
-                MealDetailView(meal: meal)
+            .navigationDestination(for: AppRoute.self) { route in
+                switch route {
+                case .mealDetail(let meal):
+                    MealDetailView(meal: meal)
+                }
             }
         }
     }
